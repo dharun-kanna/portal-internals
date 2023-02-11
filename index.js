@@ -123,7 +123,7 @@ import studentModel from "./models/studentModel.js";
 import courseModel from "./models/courseModel.js";
 import internalModel from "./models/internalsModel.js";
 
-const dharun = await studentModel.findOne({rollNo : 12});
+// const dharun = await studentModel.findOne({rollNo : 12});
 // const ml = await courseModel.findOne({courseId : 1});
 
 // const internal = new internalModel({

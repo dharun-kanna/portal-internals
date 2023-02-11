@@ -2,7 +2,6 @@ import courseModel from "../models/courseModel.js";
 import facultyModel from "../models/facultyModel.js";
 import studentModel from "../models/studentModel.js";
 
-
 const courseController = {
     getAll : async(req,res)=>{
         const allCourses = await courseModel.find().populate([{path:"faculty",model:facultyModel},{path:"students",model:studentModel}]);
