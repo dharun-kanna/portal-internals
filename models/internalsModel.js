@@ -16,4 +16,4 @@ const internalsSchema = mongoose.Schema({
     }],
 });
 
-const internalsModel = mongo
+const internalsModel = mongoose.model("Internal",internalsSchema);

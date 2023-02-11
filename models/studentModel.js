@@ -3,9 +3,15 @@ import mongoose from "mongoose";
 const studentSchema = new mongoose.Schema({
     rollNo : Number,
     name : String,
-    coursesEnrolled : [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref : "Course"
+    coursesEnrolled: [{
+        course:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref : "Course"
+        },
+        internals:{
+            type:mongoose.Schema.Types.ObjectId,
+            ref : "Internal"
+        }
     }]
 })
 

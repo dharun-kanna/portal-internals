@@ -18,9 +18,6 @@ mongoose.connect(process.env.MONGODB_URL,()=>{
     console.log(`Error : ${err}`);
 })
 
-
-
-
 //Logger
 app.use(morgan('dev'));
 
@@ -29,7 +26,6 @@ app.use(cors());
 app.use(express.json());
 
 import courseRouter from './routes/courseRoute.js';
-
 app.use('/course',courseRouter);
 
 import facultyRoute from './routes/facultyRoute.js';
@@ -120,9 +116,13 @@ app.use('/faculty',facultyRoute);
 // }
 
 
+import studentModel from "./models/studentModel.js";
+import courseModel from "./models/courseModel.js";
 
+const d = await studentModel.findOne({"name":"Dharun"})
+.populate();
 
-
+console.log(d);
 
 
 
