@@ -31,6 +31,9 @@ app.use('/course',courseRouter);
 import facultyRoute from './routes/facultyRoute.js';
 app.use('/faculty',facultyRoute);
 
+import studentRoute from './routes/studentRoute.js';
+app.use('/student', studentRoute);
+
 // import facultyModel from "./models/facultyModel.js";
 
 // const faculty1 = new facultyModel({
@@ -118,11 +121,43 @@ app.use('/faculty',facultyRoute);
 
 import studentModel from "./models/studentModel.js";
 import courseModel from "./models/courseModel.js";
+import internalModel from "./models/internalsModel.js";
 
-const d = await studentModel.findOne({"name":"Dharun"})
-.populate();
+const dharun = await studentModel.findOne({rollNo : 12});
+// const ml = await courseModel.findOne({courseId : 1});
 
-console.log(d);
+// const internal = new internalModel({
+//     unitTest : [{no:1, mark:35},{no:2, mark:39},{no:3, mark:42}],
+//     tutorial : [{no:1, mark:4},{no:2, mark:5},{no:3, mark:4}],
+//     assignment : [{no:1, mark:13},{no:2, mark:15},{no:3, mark:14}],
+//     student : dharun._id,
+//     faculty : ml._id 
+// })
+
+// await internal.save();
+
+// dharun.coursesEnrolled = [];
+// dharun.coursesEnrolled.push(
+//     {
+//         course : ml._id,
+//         internals : internal._id
+//     }
+// )
+
+// await dharun.save();
+
+// const students = await studentModel.find();
+
+// const ml = await courseModel.findOne({courseId : 1});
+
+// console.log(ml);
+// for(let i=0;i<students.length;i++){
+//     const internal = 
+//     students[i].coursesEnrolled.append(ml._id);
+//     ml.students.append(students[i]._id);
+//     await students[i].save();
+//     await ml.save();
+// }
 
 
 

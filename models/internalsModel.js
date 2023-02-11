@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 
 
 const internalsSchema = mongoose.Schema({
+    student : {type : mongoose.Schema.Types.ObjectId, ref : "Student"},
+    course : {type : mongoose.Schema.Types.ObjectId, ref : "Course"},
     unitTest : [{
         no : Number,
         mark: Number
@@ -17,3 +19,5 @@ const internalsSchema = mongoose.Schema({
 });
 
 const internalsModel = mongoose.model("Internal",internalsSchema);
+
+export default internalsModel;
