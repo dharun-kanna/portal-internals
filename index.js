@@ -122,6 +122,7 @@ app.use('/student', studentRoute);
 import studentModel from "./models/studentModel.js";
 import courseModel from "./models/courseModel.js";
 import internalModel from "./models/internalsModel.js";
+import facultyModel from "./models/facultyModel.js";
 
 // const dharun = await studentModel.findOne({rollNo : 12});
 // const ml = await courseModel.findOne({courseId : 1});
@@ -159,8 +160,24 @@ import internalModel from "./models/internalsModel.js";
 //     await ml.save();
 // }
 
-const students = await studentModel.find();
-console.log(students);
+// const dharun = await studentModel.findOne();
+// console.log(dharun);
+
+// const ml = await courseModel.findOne({name : "Machine Learning"});
+// console.log(ml)
+
+// ml.students.push(dharun._id);
+
+// await ml.save();
+
+// for(let course of students.coursesEnrolled){
+//     console.log(course)
+// }
+
+// const faculty = await facultyModel.findOne({name : "Hitesh"}).populate({path:"coursesHandling", model:courseModel});
+// console.log(faculty);
+
+// faculty
 
 
 
