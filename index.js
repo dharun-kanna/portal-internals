@@ -159,6 +159,8 @@ import internalModel from "./models/internalsModel.js";
 //     await ml.save();
 // }
 
+const students = await studentModel.find();
+console.log(students);
 
 
 

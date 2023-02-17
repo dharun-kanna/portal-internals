@@ -3,6 +3,9 @@ import courseModel from "../models/courseModel.js";
 import internalsModel from "../models/internalsModel.js";
 
 
+// for students - can get the internals for enrolled courses 
+
+
 const studentController = {
     getByRollno : async(req,res)=>{
         const student = await studentModel.findOne({rollNo : req.body.rollno })
